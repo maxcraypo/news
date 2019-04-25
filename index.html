@@ -7,19 +7,38 @@
     <script src="script.js"></script>
 </head>
 <body>
-<h1> MadMax </h1>
+<h1> MadMax
+</h1>
 
-<button id="go">find some news</button>
 <select id="countries">
-    <option id="usa">USA</option>
+    <option value="us">USA</option>
+    <option value="de">Germany</option>
+    <option value="it">Italia</option>
+    <option value="mx">Mexico</option>
+    <option value="fr">France</option>
+    <option value="ru">Russia</option>
+    <option value="jp">Japan</option>
+    <option value="za">South Africa</option>
+    <option value="br">Brazil</option>
+</select>
+
+<select id="topic">
+    <option value="business">Business</option>
+    <option value="entertainment">Entertainment</option>
+    <option value="health">Health</option>
+    <option value="sports">Sports</option>
+    <option value="technology">Technology</option>
+    <option value="general">General</option>
 </select>
 <select id="headlines">
     <option value="1"> 1 headline</option>
     <option value="2"> 2 headlines</option>
-    <option value="3">3 headlines</option>
+    <option value="3"> 3 headlines</option>
     <option value="4"> 4 headlines</option>
 
 </select>
+<button id="go">find some news</button>
+
 <div id="news"></div>
 
 
