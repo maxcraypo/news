@@ -21,8 +21,11 @@ $(document).ready(function(){
                 console.log(data);
                 var headlines=$("#headlines").val();
                 for(var i =0; i < headlines;i++){
-                    var author=data.list[i].author;
-                    console.log(author);
+                    var title=data.articles[i].title;
+                    var dis=data.articles[i].description;
+                    var url=data.articles[i].url;
+                    $("#news").append(title+ "<br>");
+                    $("#news").append("  " + dis + "<br><br>");
 
                 }
 
