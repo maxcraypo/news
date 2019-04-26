@@ -5,32 +5,37 @@
     <title>news</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css.css">
 
 </head>
 <body>
-<h1> MadMax
+<h1> What's going on in the world?
 </h1>
 
 <select id="countries">
     <option value="us">USA</option>
     <option value="de">Germany</option>
-    <option value="it">Italia</option>
+    <option value="it">Italy</option>
     <option value="mx">Mexico</option>
     <option value="fr">France</option>
     <option value="ru">Russia</option>
     <option value="jp">Japan</option>
     <option value="za">South Africa</option>
     <option value="br">Brazil</option>
+    <option value="il">Yisrael</option>
+    <option value="ie">Ireland</option>
+    <option value="sk">Slovakia</option>
+    <option value="hu">hungry</option>
 </select>
 
 <select id="topic">
-    <option value="business">Business</option>
+    <option value="general">General</option>
     <option value="entertainment">Entertainment</option>
     <option value="health">Health</option>
     <option value="sports">Sports</option>
     <option value="technology">Technology</option>
-    <option value="general">General</option>
+    <option value="Business">Business</option>
+    
 </select>
 <select id="headlines">
     <option value="1"> 1 headline</option>
@@ -52,7 +57,8 @@
 
 </select>
 <button id="go">find some news</button>
-
+<button id="clear">clear</button>
+<button id="translate">translate</button>
 <div id="news"></div>
 
 
