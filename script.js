@@ -36,9 +36,10 @@ $(document).ready(function(){
                 $("#news").append(link + "<br><br>");
 
 
-                $("#translate").click(function(article){
+                $("#translate").click(function(data){
+
                     for(var i=0;i < headlines;i++)
-                        var text=article.articles[i].title;
+                        var text=data.articles[i].title;
                     var lang=$("#countries").val();
                     $.ajax({
                         url: "https://translate.yandex.net/api/v1.5/tr.json/translate?&key=trnsl.1.1.20190410T211120Z.1ba9f462610b1621.bac935779dd2eb48263752fa11e08d330a572a71&text="+ text+"&lang=en-"+lang,
