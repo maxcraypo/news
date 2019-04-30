@@ -1,5 +1,8 @@
 // c46f84f1e83a472f825752fba49526d4
 //I made a change
+
+
+var flags=[""]
 $(document).ready(function(){
 
     $("#go").click(function(){
@@ -37,8 +40,8 @@ $(document).ready(function(){
 
 
                 $("#translate").click(function(){
-                    for(var j=0; j < headlines;j++)
-                        var text=data.articles[j].title;
+                    for(var i=0; i < headlines;i++)
+                        var text=data.articles[i].title;
                     var lang="";
                     var country= $("#countries").val();
                     if(country=="de"){
@@ -81,7 +84,7 @@ $(document).ready(function(){
                     function translate (data) {
                         console.log(data);
                         var translation=data.text[0];
-                        $("#news").append("translation: " + translation +"<br><br>");
+                        $("#translated").append("translation: " + translation +"<br><br>");
 
                     }
 
