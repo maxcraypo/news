@@ -85,12 +85,7 @@ $(document).ready(function(){
 
 
                         });
-                    function translate (data) {
-                        console.log(data);
-                        var translation=data.text[0];
-                        $("#news").append("translation: " + translation +"<br><br>");
 
-                    }
 
 
 
@@ -98,6 +93,12 @@ $(document).ready(function(){
 
 
             }
+        function translate (data) {
+            console.log(data);
+            var translation=data.text[0];
+            $("#news").append("translation: " + translation +"<br><br>");
+
+        }
 
 
 
