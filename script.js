@@ -39,42 +39,6 @@ $(document).ready(function(){
                 $("#news").append("  " + dis + "<br>");
                 $("#news").append(link + "<br><br>");
             }
-
-                $("#translate").click(function(){
-                    for(var i=0; i < headlines;i++)
-                        var text=data.articles[i].title;
-                    var lang="";
-                    var country= $("#countries").val();
-                    if(country=="de"){
-                        lang="de";
-                    }
-                    if(country=="it"){
-                        lang="it";
-                    }
-                    if(country=="mx"){
-                        lang="es";
-                    }
-                    if(country=="fr"){
-                        lang="fr";
-                    }
-                    if(country=="ru"){
-                        lang="ru";
-                    }
-                    if(country=="jp")
-                        lang="ja";
-                    if(country=="br"){
-                        lang="pt";
-                    }
-                    if(country=="il"){
-                        lang="he";
-                    }
-                    if(country=="hu"){
-                        lang="hu";
-                    }
-                    if(country=="sk"){
-                        lang="sk";
-                    }
-
                         $.ajax({
                             url: "https://translate.yandex.net/api/v1.5/tr.json/translate?&key=trnsl.1.1.20190410T211120Z.1ba9f462610b1621.bac935779dd2eb48263752fa11e08d330a572a71&text="+ text+"&lang="+lang+"-en",
                             dataType: "jsonp",
@@ -89,20 +53,55 @@ $(document).ready(function(){
 
 
 
-                })
+                }
 
 
-            }
+            });
         function translate (data) {
+
+            $("#translate").click(function(){
+                for(var i=0; i < headlines;i++)
+                    var text=data.articles[i].title;
+                var lang="";
+                var country= $("#countries").val();
+                if(country=="de"){
+                    lang="de";
+                }
+                if(country=="it"){
+                    lang="it";
+                }
+                if(country=="mx"){
+                    lang="es";
+                }
+                if(country=="fr"){
+                    lang="fr";
+                }
+                if(country=="ru"){
+                    lang="ru";
+                }
+                if(country=="jp")
+                    lang="ja";
+                if(country=="br"){
+                    lang="pt";
+                }
+                if(country=="il"){
+                    lang="he";
+                }
+                if(country=="hu"){
+                    lang="hu";
+                }
+                if(country=="sk"){
+                    lang="sk";
+                }
             console.log(data);
             var translation=data.text[0];
             $("#news").append("translation: " + translation +"<br><br>");
 
-        }
+        });
 
 
 
-    })
+    }
 
 
 });
