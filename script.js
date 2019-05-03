@@ -38,32 +38,10 @@ $(document).ready(function(){
                 $("#news").append(title + "<br>");
                 $("#news").append("  " + dis + "<br>");
                 $("#news").append(link + "<br><br>");
-            }
-                        $.ajax({
-                            url: "https://translate.yandex.net/api/v1.5/tr.json/translate?&key=trnsl.1.1.20190410T211120Z.1ba9f462610b1621.bac935779dd2eb48263752fa11e08d330a572a71&text="+ text+"&lang="+lang+"-en",
-                            dataType: "jsonp",
-                            method: "GET",
-                            success:translate
 
-
-
-
-                        });
-
-
-
-
-                }
-
-
-            });
-        function translate (data) {
-
-            $("#translate").click(function(){
-                for(var i=0; i < headlines;i++)
-                    var text=data.articles[i].title;
+                var text=data.articles[i].title;
                 var lang="";
-                var country= $("#countries").val();
+
                 if(country=="de"){
                     lang="de";
                 }
@@ -93,6 +71,26 @@ $(document).ready(function(){
                 if(country=="sk"){
                     lang="sk";
                 }
+                $.ajax({
+                    url: "https://translate.yandex.net/api/v1.5/tr.json/translate?&key=trnsl.1.1.20190410T211120Z.1ba9f462610b1621.bac935779dd2eb48263752fa11e08d330a572a71&text="+ text+"&lang="+lang+"-en",
+                    dataType: "jsonp",
+                    method: "GET",
+                    success:translate
+                });
+            }
+
+        }
+
+
+        });
+
+
+
+
+        function translate (data) {
+
+            $("#translate").click(function(){
+
             console.log(data);
             var translation=data.text[0];
             $("#news").append("translation: " + translation +"<br><br>");
