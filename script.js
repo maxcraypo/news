@@ -87,13 +87,13 @@ $(document).ready(function(){
 
 
 
-        function translate (data) {
+        function translate (word) {
 
             $("#translate").click(function(){
 
-            console.log(data);
-            var translation=data.text[0];
-            $("#news").append("translation: " + translation +"<br><br>");
+            console.log(word);
+            var translation=word.text[0];
+            $("#translated").append( + "translation: " + translation +"<br><br>");
 
         });
 
