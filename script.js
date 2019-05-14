@@ -10,6 +10,8 @@ $(document).ready(function(){
         $("#clear").click(function(){
             $("#news").empty();
             $("#translated").empty();
+            location.reload(true);
+
         });
         var country= $("#countries").val();
         var topic= $("#topic").val();
@@ -93,7 +95,7 @@ $(document).ready(function(){
 
             console.log(word);
             var translation=word.text[0];
-            $("#translated").append( + "translation: " + translation +"<br><br>");
+            $("#translated").append( translation +"<br><br>");
 
         });
 
