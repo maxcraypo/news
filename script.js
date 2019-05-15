@@ -1,8 +1,6 @@
 // c46f84f1e83a472f825752fba49526d4
 //I made a change
 
-
-
 $(document).ready(function(){
 
     $("#go").click(function(){
@@ -86,9 +84,6 @@ $(document).ready(function(){
 
         });
 
-
-
-
         function translate (word) {
 
             $("#translate").click(function(){
@@ -102,7 +97,6 @@ $(document).ready(function(){
 
 
     }
-
 
 });
 
